@@ -1,2 +1,2 @@
-# cheatsheet
-Codecademy CheatSheet
+# Cheat sheet
+Codecademy Cheat sheet for FullStack Development
