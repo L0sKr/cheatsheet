@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/styles.css" type="text/css">
+    <title>Cheat Sheet Project</title>
+</head>
+<body>
+    <h1>Positionning with CSS</h1>
+    <div id="box-model">
+        <h2>The box model</h2>
+        <img src="resources/styles.png" alt="A representation of the box model">
+        <p><strong>Note:</strong> The vertical margins of two elements 
+            which are next to eachother will collapse unlike the horizontal margins 
+            which will add up.</p>
+        <p>The interpretation of the box model can be altered when specifying that the 
+            width and height correspond to the distance between the borders horizontally 
+            and vertically respectively.</p>
+        <p>To do so, one has to add the specification : <span class="code">box-sizing : boder-box;</span>.</p>
+    </div>
+    <div id="clear">
+        <h2>Clear</h2>
+        <p>The clear CSS property sets whether an element must be moved below (cleared) 
+            floating elements that precede it. The clear property applies to floating and 
+            non-floating elements.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th class="value-header">Value</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="code">none</td>
+                    <td>Indicates that the element is not moved down to clear past 
+                        floating elements.</td>
+                </tr>
+                <tr>
+                    <td class="code">left</td>
+                    <td>Indicates that the element is moved down to clear past left 
+                        floats.</td>
+                </tr>
+                <tr>
+                    <td class="code">right</td>
+                    <td>Indicates that the element is moved down to clear past right 
+                        floats.</td>
+                </tr>
+                <tr>
+                    <td class="code">both</td>
+                    <td>Indicates that the element is moved down to clear past both 
+                        left and right floats.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="display">
+        <h2>Display</h2>
+        <p>The display CSS property sets whether an element is treated as a block or 
+            inline element (and the layout used for its children, such as flow layout, 
+            grid or flex).</p>
+        <table>
+            <thead>
+                <tr>
+                    <th class="value-header">Value</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="code">inline</td>
+                    <td>The element generates one or more inline element boxes that do 
+                        not generate line breaks before or after themselves. In normal 
+                        flow, the next element will be on the same line if there is space.<br/>
+                        The size of the element cannot be changed.</td>
+                </tr>
+                <tr>
+                    <td class="code">block</td>
+                    <td>The element generates a block element box, generating line breaks 
+                        both before and after the element when in the normal flow.<br/>
+                        The size of the element can be changed/specified.</td>
+                </tr>
+                <tr>
+                    <td class="code">inline-block</td>
+                    <td>The element generates a block element box that will be flowed with 
+                        surrounding content as if it were a single inline box (behaving much 
+                        like a replaced element would).<br/>
+                        The size of the element can be changed/specified.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="float">
+        <h2>Float</h2>
+        <p>The float CSS property places an element on the left or right side of its container, 
+            allowing text and inline elements to wrap around it. </p>
+        <table>
+            <thead>
+                <tr>
+                    <th class="value-header">Value</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="code">none</td>
+                    <td>The element must not float.</td>
+                </tr>
+                <tr>
+                    <td class="code">left</td>
+                    <td>The element must float on the left side of its containing block.</td>
+                </tr>
+                <tr>
+                    <td class="code">right</td>
+                    <td>The element must float on the right side of its containing block.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="overflow">
+        <h2>Overflow</h2>
+        <p>The overflow CSS shorthand property sets the desired behavior for an element's overflow 
+            — i.e. when an element's content is too big to fit in its block formatting context — in 
+            both directions.</p>
+            <table>
+            <thead>
+                <tr>
+                    <th class="value-header">Value</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="code">visible</td>
+                    <td>Content is not clipped and may be rendered outside the padding box.</td>
+                </tr>
+                <tr>
+                    <td class="code">hidden</td>
+                    <td>Content is clipped if necessary to fit the padding box. No scrollbars are 
+                        provided, and no support for allowing the user to scroll (such as by dragging 
+                        or using a scroll wheel) is allowed.The content can be scrolled programmatically.</td>
+                </tr>
+                <tr>
+                    <td class="code">clip</td>
+                    <td>Content is clipped if necessary to fit the padding box. No scrollbars are 
+                        provided, and no support for allowing the user to scroll (such as by dragging 
+                        or using a scroll wheel) is allowed.The content cannot be scrolled 
+                        programmatically.</td>
+                </tr>
+                <tr>
+                    <td class="code">scroll</td>
+                    <td>Content is clipped if necessary to fit the padding box. Browsers always display 
+                        scrollbars whether or not any content is actually clipped, preventing scrollbars 
+                        from appearing or disappearing as content changes.</td>
+                </tr>
+                <tr>
+                    <td class="code">auto</td>
+                    <td>If content fits inside the padding box, it looks the same as visible, but still 
+                        establishes a new block formatting context. Desktop browsers provide scrollbars 
+                        if content overflows.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="position">
+        <h2>Position</h2>
+        <p>The position CSS property sets how an element is positioned in a document. The top, right, 
+            bottom, and left properties determine the final location of positioned elements.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th class="value-header">Value</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="code">static</td>
+                    <td>The element is positioned according to the normal flow of the document. The top, 
+                        right, bottom, left, and z-index properties have no effect. This is the default 
+                        value.</td>
+                </tr>
+                <tr>
+                    <td class="code">relative</td>
+                    <td>The element is positioned according to the normal flow of the document, and then 
+                        offset relative to itself based on the values of top, right, bottom, and left.<br/> 
+                        The offset does not affect the position of any other elements; thus, the space 
+                        given for the element in the page layout is the same as if position were static.</td>
+                </tr>
+                <tr>
+                    <td class="code">absolute</td>
+                    <td>The element is removed from the normal document flow, and no space is created for 
+                        the element in the page layout. <br/> It is positioned relative to its closest positioned 
+                        ancestor, if any; otherwise, it is placed relative to the initial containing block. <br/>
+                        Its final position is determined by the values of top, right, bottom, and left.</td>
+                </tr>
+                <tr>
+                    <td class="code">fixed</td>
+                    <td>The element is removed from the normal document flow, and no space is created for the 
+                        element in the page layout. <br/>It is positioned relative to the initial containing 
+                        block.<br/> Its final position is determined by the values of top, right, bottom, and left.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="code">sticky</td>
+                    <td>The element is positioned according to the normal flow of the document, and then offset 
+                        relative to its nearest scrolling ancestor and containing block (nearest block-level 
+                        ancestor), including table-related elements, based on the values of top, right, bottom, 
+                        and left. The offset does not affect the position of any other elements.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="position">
+        <h2>Z-index</h2>
+        <p>The z-index CSS property sets the z-order of a positioned element and its descendants or flex items. 
+            Overlapping elements with a larger z-index cover those with a smaller one.</p>
+            <table>
+            <thead>
+                <tr>
+                    <th class="value-header">Value</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="code">auto</td>
+                    <td>The box does not establish a new local stacking context. The stack level of the generated 
+                        box in the current stacking context is 0.</td>
+                </tr>
+                <tr>
+                    <td class="code">&lt;integer&gt;</td>
+                    <td>This &lt;integer&gt; is the stack level of the generated box in the current stacking context. 
+                        The box also establishes a local stacking context. This means that the z-indexes of 
+                        descendants are not compared to the z-indexes of elements outside this element.</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>   
+</body>
+</html>
